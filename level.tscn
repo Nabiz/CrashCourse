@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmmnevbvcfiet"]
+
+[ext_resource type="Texture2D" uid="uid://7vf0pconqkic" path="res://Assets/Sprites/grass_platform.png" id="1_u52ul"]
+[ext_resource type="Texture2D" uid="uid://1law08rkhwak" path="res://Assets/Sprites/brick_platform.png" id="2_vonw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
+size = Vector2(512, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
+size = Vector2(128, 64)
+
+[node name="Level" type="Node2D"]
+
+[node name="Platform" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+texture = ExtResource("1_u52ul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(540, 453)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform2"]
+texture = ExtResource("1_u52ul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(840, 217)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform3"]
+texture = ExtResource("2_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(712, 216)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform4"]
+texture = ExtResource("2_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(136, 328)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform5"]
+texture = ExtResource("2_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+shape = SubResource("RectangleShape2D_oi3di")
