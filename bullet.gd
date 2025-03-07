@@ -11,3 +11,7 @@ func change_initial_direction(new_direction: int):
 	if new_direction == -1:
 		$Sprite2D.flip_h = true
 		direction = -1
+
+
+func _on_timer_timeout() -> void:
+	queue_free()

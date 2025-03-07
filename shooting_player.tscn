@@ -11,3 +11,7 @@ modulate = Color(0, 0, 1, 1)
 
 [node name="Marker2D" type="Marker2D" parent="." index="2"]
 position = Vector2(64, 0)
+
+[node name="CooldownTimer" type="Timer" parent="." index="3"]
+
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]
