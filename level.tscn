@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmmnevbvcfiet"]
+[gd_scene load_steps=6 format=3 uid="uid://dmmnevbvcfiet"]
 
 [ext_resource type="Texture2D" uid="uid://7vf0pconqkic" path="res://Assets/Sprites/grass_platform.png" id="1_u52ul"]
 [ext_resource type="Texture2D" uid="uid://1law08rkhwak" path="res://Assets/Sprites/brick_platform.png" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://c0m6mfohjsorb" path="res://player.tscn" id="3_oi3di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
-size = Vector2(512, 64)
+size = Vector2(512, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
-size = Vector2(128, 64)
+size = Vector2(128, 54)
 
 [node name="Level" type="Node2D"]
 
@@ -17,6 +18,7 @@ size = Vector2(128, 64)
 texture = ExtResource("1_u52ul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
@@ -26,6 +28,7 @@ position = Vector2(540, 453)
 texture = ExtResource("1_u52ul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="Platform3" type="StaticBody2D" parent="."]
@@ -35,6 +38,7 @@ position = Vector2(840, 217)
 texture = ExtResource("2_vonw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="Platform4" type="StaticBody2D" parent="."]
@@ -44,6 +48,7 @@ position = Vector2(712, 216)
 texture = ExtResource("2_vonw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="Platform5" type="StaticBody2D" parent="."]
@@ -53,4 +58,8 @@ position = Vector2(136, 328)
 texture = ExtResource("2_vonw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="Player" parent="." instance=ExtResource("3_oi3di")]
+position = Vector2(381, 349)
