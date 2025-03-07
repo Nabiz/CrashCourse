@@ -15,3 +15,8 @@ func change_initial_direction(new_direction: int):
 
 func _on_timer_timeout() -> void:
 	queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	#if body is not Player:
+	queue_free()

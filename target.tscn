@@ -16,3 +16,4 @@ texture = ExtResource("1_t2jmu")
 shape = SubResource("CircleShape2D_e1yvt")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

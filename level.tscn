@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmmnevbvcfiet"]
+[gd_scene load_steps=8 format=3 uid="uid://dmmnevbvcfiet"]
 
 [ext_resource type="Texture2D" uid="uid://7vf0pconqkic" path="res://Assets/Sprites/grass_platform.png" id="1_u52ul"]
 [ext_resource type="Texture2D" uid="uid://1law08rkhwak" path="res://Assets/Sprites/brick_platform.png" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://c0m6mfohjsorb" path="res://player.tscn" id="3_oi3di"]
 [ext_resource type="PackedScene" uid="uid://c0o0o2hd6dfo7" path="res://shooting_player.tscn" id="4_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://bq2tjnhjgj4hm" path="res://target.tscn" id="5_f2txt"]
 
@@ -64,6 +65,7 @@ shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="ShootingPlayer" parent="." instance=ExtResource("4_0b4ue")]
 position = Vector2(515.709, 344.315)
+collision_layer = 2
 
 [node name="Sprite2D" parent="ShootingPlayer" index="0"]
 modulate = Color(0, 1, 0, 1)
@@ -72,5 +74,9 @@ modulate = Color(0, 1, 0, 1)
 
 [node name="Target" parent="." instance=ExtResource("5_f2txt")]
 position = Vector2(119, 218)
+collision_mask = 4
+
+[node name="Player" parent="." instance=ExtResource("3_oi3di")]
+position = Vector2(691.9, 346.2)
 
 [editable path="ShootingPlayer"]
