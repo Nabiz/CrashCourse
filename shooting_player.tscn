@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0o0o2hd6dfo7"]
+
+[ext_resource type="PackedScene" uid="uid://c0m6mfohjsorb" path="res://player.tscn" id="1_q0c63"]
+[ext_resource type="Script" uid="uid://dmn0quhvoc6el" path="res://shooting_player.gd" id="2_kubnl"]
+
+[node name="ShootingPlayer" instance=ExtResource("1_q0c63")]
+script = ExtResource("2_kubnl")
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0, 0, 1, 1)
+
+[node name="Marker2D" type="Marker2D" parent="." index="2"]
+position = Vector2(64, 0)
